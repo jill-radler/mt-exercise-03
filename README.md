@@ -66,3 +66,32 @@ pip install -r requirements.txt
 Manually download and install Moses and other dependencies (you'll need to look inside scripts/download_install_packages.sh to replicate its steps).
 
 Run the training logic by manually executing the code inside train.sh, or porting it to a Python script or notebook.
+
+## Exercise 3
+
+# Changes I made
+
+- Added layerNorm (pre and post) in the transformer configuration
+- Created two configuration files:
+    - deen_transformer_pre.yaml
+    - deen_transformer_post.yaml
+- Updated `train.sh` to train both model variants
+- - Extracted validation perplexities from the generated `validations.txt` files and visualized them in Excel using a line chart.
+
+
+# Training
+
+Run Training with:
+./scripts/train.sh
+
+Models I trained:
+deen_transformer_pre.yaml
+deen_transformer_post.yaml
+
+Results:
+models/deen_transformer_pre/validations.txt
+models/deen_transformer_post/validations.txt
+provided baseline log file
+
+The table and line chart were created in Excel.
+
